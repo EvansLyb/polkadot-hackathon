@@ -20,10 +20,10 @@ function Main (props) {
       setBlockNumber(number.toNumber());
       setBlockNumberTimer(0);
     })
-      .then(unsub => {
-        unsubscribeAll = unsub;
-      })
-      .catch(console.error);
+    .then(unsub => {
+      unsubscribeAll = unsub;
+    })
+    .catch(console.error);
 
     return () => unsubscribeAll && unsubscribeAll();
   }, [bestNumber]);
